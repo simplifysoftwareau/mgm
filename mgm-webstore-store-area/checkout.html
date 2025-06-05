@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Checkout - MGM Webstore - Store Area</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/drift-zoom/drift-basic.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+</head>
+
+<body class="checkout-page">
+
+  <header id="header" class="header position-relative">
+    <!-- Main Header -->
+    <div class="main-header">
+      <div class="container-fluid container-xl">
+        <div class="d-flex py-3 align-items-center justify-content-between">
+
+          <!-- Logo -->
+          <a href="index.html" class="logo d-flex align-items-center">
+            <!-- Uncomment the line below if you also wish to use an image logo -->
+            <img src="https://simplifysoftwareau.github.io/public-assets/mgm/webstore/images/logo.thewaifs.png" alt="">
+          </a>
+
+          <!-- Actions -->
+          <div class="header-actions d-flex align-items-center justify-content-end">
+
+            <!-- Account -->
+            <div class="d-flex gap-3">
+              <input type="text" name="search" class="form-control header-search" id="search" placeholder="Search the store..." required="">
+              <button class="header-action-btn" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-cart3"></i><span>2 Items</span><i class="bi bi-chevron-down"></i>
+              </button>
+              <div class="dropdown-menu" style="">
+                <div class="dropdown-body">
+                  <div>
+                    <!-- Order Summary -->
+                    <div class="order-summary">
+                      <div class="order-summary-content">
+                        <div class="order-items">
+                          <div class="order-item">
+                            <div class="order-item-image">
+                              <img src="https://simplifysoftwareau.github.io/public-assets/mgm/webstore/images/artwork.thewaifs.1.jpg" alt="Product" class="img-fluid">
+                            </div>
+                            <div class="order-item-details">
+                              <h4>Up All Night</h4>
+                              <p class="artist-name">The Waifs</p>
+                              <p class="order-item-variant">Digital Album</p>
+                            </div>
+                          </div>
+                          <div class="order-item-footer d-flex">
+                            <div class="order-item-price">
+                              <span class="price">Price: $29.99</span>
+                            </div>
+                            <div class="quantity-selector">
+                              <input type="number" class="quantity-input" value="1" min="1" max="10">
+                              <div>
+                                <button class="quantity-btn decrease">
+                                  <i class="bi bi-caret-up-fill"></i>
+                                </button>
+                                <button class="quantity-btn increase">
+                                  <i class="bi bi-caret-down-fill"></i>
+                                </button>
+                              </div>
+                            </div>
+                            <button class="trash-btn">
+                              <i class="bi bi-trash"></i>
+                            </button>
+                          </div>
+
+                          <div class="order-item">
+                            <div class="order-item-image">
+                              <img src="https://simplifysoftwareau.github.io/public-assets/mgm/webstore/images/artwork.thewaifs.6.jpg" alt="Product" class="img-fluid">
+                            </div>
+                            <div class="order-item-details">
+                              <h4>Sun Dirt Water</h4>
+                              <p class="artist-name">The Waifs</p>
+                              <p class="order-item-variant">Vinyl LP</p>
+                            </div>
+                          </div>
+                          <div class="order-item-footer d-flex">
+                            <div class="order-item-price">
+                              <span class="price">Price: $19.99</span>
+                            </div>
+                            <div class="quantity-selector">
+                              <input type="number" class="quantity-input" value="1" min="1" max="10">
+                              <div>
+                                <button class="quantity-btn decrease">
+                                  <i class="bi bi-caret-up-fill"></i>
+                                </button>
+                                <button class="quantity-btn increase">
+                                  <i class="bi bi-caret-down-fill"></i>
+                                </button>
+                              </div>
+                            </div>
+                            <button class="trash-btn">
+                              <i class="bi bi-trash"></i>
+                            </button>
+                          </div>
+                        </div>
+
+                        <div class="order-totals">
+                          <div class="order-subtotal d-flex justify-content-between align-items-center">
+                            <span>Items: 3</span>
+                            <button type="button" class="btn btn-outline-secondary">View Cart</button>
+                          </div>
+                          <div class="order-total d-flex justify-content-between align-items-center">
+                            <span>Total: $69.97</span>
+                            <button type="button" class="btn btn-primary">Checkout</button>
+                          </div>
+                          <div class="order-prices">
+                            <span>* Prices in Australian Dollars (AUD)</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </header>
+
+  <main class="main">
+
+    <!-- Ecommerce Checkout Section -->
+    <section id="ecommerce-checkout" class="ecommerce-checkout section">
+
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-8">
+            <!-- Checkout Steps -->
+            <div class="checkout-steps mb-4 g-2">
+              <div class="step active" data-step="1">
+                <div class="step-title">Details</div>
+              </div>
+              <div class="step" data-step="2">
+                <div class="step-title">Address</div>
+              </div>
+              <div class="step" data-step="3">
+                <div class="step-title">Delivery</div>
+              </div>
+              <div class="step" data-step="4">
+                <div class="step-title">Payment</div>
+              </div>
+              <div class="step" data-step="5">
+                <div class="step-title">Finished!</div>
+              </div>
+            </div>
+
+            <!-- Checkout Forms Container -->
+            <div class="checkout-forms">
+              <!-- Step 1: Customer Information -->
+              <div class="checkout-form active" data-form="1">
+                <div class="form-header">
+                  <h3>Customer Details</h3>
+                  <p>Please enter your details</p>
+                </div>
+                <form class="checkout-form-element">
+                  <div class="payment-methods">
+                    <div class="payment-method active">
+                      <div class="payment-method-header">
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="payment-method" id="credit-card" checked="">
+                          <label class="form-check-label" for="credit-card">
+                            Create a new account
+                          </label>
+                        </div>
+                      </div>
+                      <div class="payment-method-body">
+                        <div class="row">
+                          <div class="col-md-6 form-group">
+                            <label for="first-name">First Name</label>
+                            <input type="text" name="first-name" class="form-control" id="first-name" placeholder="Your First Name" required="">
+                          </div>
+                        </div>
+                        <div class="row mt-3">
+                          <div class="col-md-6 form-group mt-3 mt-md-0">
+                            <label for="last-name">Last Name</label>
+                            <input type="text" name="last-name" class="form-control" id="last-name" placeholder="Your Last Name" required="">
+                          </div>
+                        </div>
+                        <div class="row mt-3">
+                          <div class="col-md-6 form-group mt-3 mt-md-0">
+                            <label for="last-name">Email</label>
+                            <input type="text" name="last-name" class="form-control" id="last-name" placeholder="Your Email Address" required="">
+                          </div>
+                        </div>
+                        <div class="row mt-3">
+                          <div class="col-md-6 form-group mt-3 mt-md-0">
+                            <label for="last-name">Password</label>
+                            <input type="text" name="last-name" class="form-control" id="last-name" placeholder="Your Password" required="">
+                          </div>
+                        </div>
+                        <div class="row mt-3">
+                          <div class="col-md-6 form-group mt-3 mt-md-0">
+                            <label for="last-name">Confirm Password</label>
+                            <input type="text" name="last-name" class="form-control" id="last-name" placeholder="Confirm Your Password" required="">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="payment-method mt-3">
+                      <div class="payment-method-header">
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="payment-method" id="paypal">
+                          <label class="form-check-label" for="paypal">
+                            Already have an account? Log in
+                          </label>
+                        </div>
+                      </div>
+                      <div class="payment-method-body d-none">
+                        <p>...</p>
+                      </div>
+                    </div>
+                    <div class="payment-method mt-3">
+                      <div class="payment-method-header">
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="payment-method" id="apple-pay">
+                          <label class="form-check-label" for="apple-pay">
+                            Checkout as a guest
+                          </label>
+                        </div>
+                      </div>
+                      <div class="payment-method-body d-none">
+                        <p>...</p>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="d-flex justify-content-between mt-4">
+                    <a href="#" class="continue-shopping">
+                      <i class="bi bi-arrow-left me-2"></i>Continue Shopping
+                    </a>
+                    <button type="button" class="btn btn-primary next-step" data-next="2">Continue to Address</button>
+                  </div>
+                </form>
+              </div>
+
+              <!-- Step 2: Shipping Address -->
+              <div class="checkout-form" data-form="2">
+                <div class="form-header">
+                  <h3>Shipping Address</h3>
+                  <p>Where should we deliver your order?</p>
+                </div>
+                <form class="checkout-form-element">
+                  <div class="col-md-6 form-group">
+                    <label for="first-name">First Name</label>
+                    <input type="text" name="first-name" class="form-control" id="first-name" placeholder="Your First Name" required="">
+                  </div>
+                  <div class="col-md-6 form-group mt-3">
+                    <label for="last-name">Last Name</label>
+                    <input type="text" name="last-name" class="form-control" id="last-name" placeholder="Your Last Name" required="">
+                  </div>
+                  <div class="col-md-6 form-group mt-3">
+                    <label for="apartment">Unit</label>
+                    <input type="text" class="form-control" name="apartment" id="apartment" placeholder="Apartment, Suite, Unit, etc.">
+                  </div>
+                  <div class="row mt-3">
+                    <div class="col-md-6 form-group">
+                      <label for="address">Address</label>
+                      <input type="text" class="form-control" name="address" id="address" placeholder="Type and select..." required="">
+                    </div>
+                    <div class="col-md-6 form-group manual-address">
+                      <a href="#">Enter address manually</a>
+                    </div>
+                  </div>
+                  <div class="form-group mt-3 fw-light">
+                    Start typing your address in the <i>Address</i> field and select your address from the drop down list. If you can't find your address or are entering a PO Box or Parcel Locker, click the <i>Enter address manually</i> link. Please ensure that you complete the Unit field if relevant.
+                  </div>
+                  <div class="d-flex justify-content-between mt-4">
+                    <button type="button" class="btn btn-outline-secondary prev-step" data-prev="1">Back to Details</button>
+                    <button type="button" class="btn btn-primary next-step" data-next="3">Continue to Delivery</button>
+                  </div>
+                </form>
+              </div>
+
+              <!-- Step 3: Delivery -->
+              <div class="checkout-form" data-form="3">
+                <div class="form-header">
+                  <h3>Delivery Options</h3>
+                </div>
+                <form class="checkout-form-element">
+                  <p class="fw-light">Dispatch Delivery using AusPost Immediately by</p>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="delivery-method" id="parcel-post" checked="">
+                    <label class="form-check-label" for="parcel-post">
+                      Parcel Post ($11.45)
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="delivery-method" id="express-post" checked="">
+                    <label class="form-check-label" for="express-post">
+                      Express Post ($14.95)
+                    </label>
+                  </div>
+                  <div class="d-flex gap-1 align-items-center">
+                    <a href="#" class="text-decoration-underline">Hide Options</a><i class="bi bi-caret-up-fill"></i>&nbsp;<i class="bi bi-info-circle"></i>
+                  </div>
+                  <div class="col-12 form-group mt-3">
+                    <label for="card-number">Delivery Instructions</label>
+                    <textarea class="form-control" name="card-number" id="card-number" placeholder="Enter your delivery instructions here..." rows="5" required=""></textarea>
+                  </div>
+                  <div class="d-flex justify-content-between mt-4">
+                    <button type="button" class="btn btn-outline-secondary prev-step" data-prev="2">Back to Address</button>
+                    <button type="button" class="btn btn-primary next-step" data-next="4">Continue to Payment</button>
+                  </div>
+                </form>
+              </div>
+
+              <!-- Step 4: Payment Method -->
+              <div class="checkout-form" data-form="4">
+                <div class="form-header">
+                  <h3>Payment Method</h3>
+                  <p>Choose how you'd like to pay</p>
+                </div>
+                <form class="checkout-form-element">
+                  <div class="col-md-6 form-group">
+                    <label for="country">Payment Method</label>
+                    <select class="form-select" id="country" name="country" required="">
+                      <option value="">[Select Payment Method]</option>
+                      <option value="US" selected="">Mastercard</option>
+                      <option value="CA">Visa</option>
+                      <option value="UK">PayPal</option>
+                    </select>
+                  </div>
+                  <div class="row mt-3">
+                    <label for="city">Card Number</label>
+                    <div class="col-md-2 form-group">
+                      <input type="text" name="city" class="form-control" id="city" placeholder="" required="">
+                    </div>
+                    <div class="col-md-2 form-group mt-3 mt-md-0">
+                      <input type="text" name="state" class="form-control" id="state" placeholder="" required="">
+                    </div>
+                    <div class="col-md-2 form-group mt-3 mt-md-0">
+                      <input type="text" name="zip" class="form-control" id="zip" placeholder="" required="">
+                    </div>
+                    <div class="col-md-2 form-group mt-3 mt-md-0">
+                      <input type="text" name="zip" class="form-control" id="zip" placeholder="" required="">
+                    </div>
+                  </div>
+                  <div class="row mt-3">
+                    <label for="city">Card Expiration Date</label>
+                    <div class="col-md-2 form-group">
+                      <select class="form-select" id="country" name="country" required="">
+                        <option value="">01</option>
+                        <option value="">02</option>
+                        <option value="">03</option>
+                        <option value="">04</option>
+                        <option value="">05</option>
+                        <option value="">06</option>
+                        <option value="">07</option>
+                        <option value="">08</option>
+                        <option value="">09</option>
+                        <option value="">10</option>
+                        <option value="">11</option>
+                        <option value="">12</option>
+                      </select>
+                    </div>
+                    <div class="col-md-2 form-group mt-3 mt-md-0">
+                      <select class="form-select" id="country" name="country" required="">
+                        <option value="">2025</option>
+                        <option value="">2026</option>
+                        <option value="">2027</option>
+                        <option value="">2028</option>
+                        <option value="">2029</option>
+                        <option value="">2030</option>
+                        <option value="">2031</option>
+                        <option value="">2032</option>
+                        <option value="">2033</option>
+                        <option value="">2034</option>
+                        <option value="">2035</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="row mt-3">
+                    <div class="col-md-3 form-group">
+                      <label for="address">Card Security Code</label>
+                      <input type="text" class="form-control" name="address" id="address" placeholder="" required="">
+                    </div>
+                    <div class="col-md-6 form-group manual-address">
+                      <a href="#">What is this?</a>
+                    </div>
+                  </div>
+                  <div class="form-check mt-4">
+                    <input class="form-check-input" type="checkbox" id="terms" name="terms" required="">
+                    <label class="form-check-label" for="terms">
+                      I agree to the <a href="#" data-bs-toggle="modal" data-bs-target="#termsModal">Terms and Conditions</a> and <a href="#" data-bs-toggle="modal" data-bs-target="#privacyModal">Privacy Policy</a>
+                    </label>
+                  </div>
+                  <div class="form-group mt-3 fw-light">
+                    When you click the <i>Pay Now</i> button, your credit card will be charged in Australian Dollars (AUD). Please do not navigate away from this page until the transaction has completed.
+                    <br><br>
+                    *** Please ensure that the details of your order are correct before continuing. ***
+                  </div>
+                  <div class="d-flex justify-content-between mt-4">
+                    <button type="button" class="btn btn-outline-secondary prev-step" data-prev="3">Back to Delivery</button>
+                    <button type="button" class="btn btn-primary next-step" data-next="5">Pay Now</button>
+                  </div>
+                </form>
+              </div>
+
+              <!-- Step 4: Order Review -->
+              <div class="checkout-form" data-form="5">
+                <div class="form-header">
+                  <h3>Thanks for shopping with Test Store</h3>
+                  <p>Your order #60623 has been placed and a confirmation email has been sent to chris@thegroovemerchants.com.</p>
+                </div>
+                <form class="checkout-form-element">
+                  <div class="review-sections">
+                    <div class="review-section">
+                      <div class="review-section-header">
+                        <h4>Purchase Details</h4>
+                      </div>
+                      <!-- Order Summary -->
+                      <div class="order-summary">
+                        <div class="order-summary-content">
+                          <div class="order-items">
+                            <div class="order-item align-items-center">
+                              <div class="order-item-image">
+                                <img src="https://simplifysoftwareau.github.io/public-assets/mgm/webstore/images/artwork.thewaifs.1.jpg" alt="Product" class="img-fluid">
+                              </div>
+                              <div class="order-item-details">
+                                <h4>Up All Night</h4>
+                                <p class="order-item-variant">The Waifs</p>
+                              </div>
+                              <div>Digital Album</div>
+                              <div><a href="#" class="text-decoration-underline">Download</a></div>
+                            </div>
+                            <div class="order-item align-items-center pb-0">
+                              <div class="order-item-image">
+                                <img src="https://simplifysoftwareau.github.io/public-assets/mgm/webstore/images/artwork.thewaifs.6.jpg" alt="Product" class="img-fluid">
+                              </div>
+                              <div class="order-item-details">
+                                <h4>Sun Dirt Water</h4>
+                                <p class="order-item-variant">The Waifs</p>
+                              </div>
+                              <div>Vinyl LP</div>
+                              <div><a href="#" class="text-decoration-underline">More Info</a></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="review-section mt-3">
+                      <div class="review-section-header">
+                        <h4>Any Questions?</h4>
+                      </div>
+                      <div class="review-section-content">
+                        <p class="fw-light">If you have any enquiries or changes regarding your order, feel free to email us at <a href="#" class="text-decoration-underline">info@waterfrontrecords.com</a>.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-between mt-4">
+                    <a href="#" class="continue-shopping">
+                      <i class="bi bi-arrow-left me-2"></i>Continue Shopping
+                    </a>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <!-- Order Summary -->
+            <div class="order-summary mb-3">
+              <div class="order-summary-header">
+                <h3>Order Summary</h3>
+                <button type="button" class="btn-toggle-summary d-lg-none">
+                  <i class="bi bi-chevron-down"></i>
+                </button>
+              </div>
+
+              <div class="order-summary-content">
+                <div class="order-items">
+                  <div class="order-item">
+                    <div class="order-item-image">
+                      <img src="https://simplifysoftwareau.github.io/public-assets/mgm/webstore/images/artwork.thewaifs.1.jpg" alt="Product" class="img-fluid">
+                    </div>
+                    <div class="order-item-details">
+                      <h4>Up All Night</h4>
+                      <p class="order-item-variant">The Waifs</p>
+                      <div class="order-item-price">
+                        <span class="quantity">1 ×</span>
+                        <span class="price">$29.99</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="order-item">
+                    <div class="order-item-image">
+                      <img src="https://simplifysoftwareau.github.io/public-assets/mgm/webstore/images/artwork.thewaifs.6.jpg" alt="Product" class="img-fluid">
+                    </div>
+                    <div class="order-item-details">
+                      <h4>Sun Dirt Water</h4>
+                      <p class="order-item-variant">The Waifs</p>
+                      <div class="order-item-price">
+                        <span class="quantity">2 ×</span>
+                        <span class="price">$19.99</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="order-totals">
+                  <div class="order-subtotal d-flex justify-content-between">
+                    <span>Subtotal (inc GST)</span>
+                    <span>$69.97</span>
+                  </div>
+                  <div class="order-shipping d-flex justify-content-between">
+                    <span>Shipping &amp; Handling</span>
+                    <span>$9.99</span>
+                  </div>
+                  <div class="order-tax d-flex justify-content-between">
+                    <span>Merchant Fee</span>
+                    <span>$1.60</span>
+                  </div>
+                  <div class="order-total d-flex justify-content-between">
+                    <span>Total (inc GST)</span>
+                    <span>$81.56</span>
+                  </div>
+                </div>
+
+                <div class="order-currency mt-2">* Prices in Australian Dollars (AUD)</div>
+
+                <div class="promo-code mt-3">
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Promo Code" aria-label="Promo Code">
+                    <button class="btn btn-outline-primary" type="button">Apply</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Email -->
+            <div class="order-summary mb-3">
+              <div class="order-summary-header">
+                <h3>Confirmation Email</h3>
+                <button type="button" class="btn-toggle-summary d-lg-none">
+                  <i class="bi bi-chevron-down"></i>
+                </button>
+              </div>
+
+              <div class="order-summary-content">
+                chris@thegroovemerchants.com
+              </div>
+            </div>
+            <!-- Delivery Details -->
+            <div class="order-summary">
+              <div class="order-summary-header">
+                <h3>Delivery Details</h3>
+                <button type="button" class="btn-toggle-summary d-lg-none">
+                  <i class="bi bi-chevron-down"></i>
+                </button>
+              </div>
+
+              <div class="order-summary-content">
+                <div class="pb-3">Chris Jones</div>
+                <div class="pb-3">
+                  1-7 Bruce Street<br>
+                  Brighton-Le-Sands NSW 2216<br>
+                  Australia<br>
+                  Ph 0402111111
+                </div>
+                <div>Delivery immediately by AusPost using Express Post service.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Terms and Privacy Modals -->
+        <div class="modal fade" id="termsModal" tabindex="-1" aria-labelledby="termsModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="termsModalLabel">Terms and Conditions</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor.</p>
+                <p>Suspendisse in orci enim. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor.</p>
+                <p>Suspendisse in orci enim. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">I Understand</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="privacyModal" tabindex="-1" aria-labelledby="privacyModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="privacyModalLabel">Privacy Policy</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim.</p>
+                <p>Suspendisse in orci enim. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor.</p>
+                <p>Suspendisse in orci enim. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">I Understand</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Ecommerce Checkout Section -->
+
+  </main>
+
+  <footer id="footer" class="footer position-relative light-background">
+    <div class="container">
+      <div class="container">
+        <div class="copyright">
+          <span>Powered by</span> <strong class="px-1 sitename">MGM Distribution</strong>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/drift-zoom/Drift.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
