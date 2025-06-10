@@ -34,7 +34,7 @@
     <!-- Main Header -->
     <div class="main-header">
       <div class="container-fluid container-xl">
-        <div class="d-flex py-3 align-items-center justify-content-between">
+        <div class="d-flex flex-column flex-md-row p-3 p-lg-0 py-lg-3 align-items-center justify-content-between">
 
           <!-- Logo -->
           <a href="index.html" class="logo d-flex align-items-center">
@@ -43,13 +43,13 @@
           </a>
 
           <!-- Actions -->
-          <div class="header-actions d-flex align-items-center justify-content-end">
+          <div class="header-actions d-flex mt-3 mt-md-0 align-items-center justify-content-end">
 
             <!-- Account -->
             <div class="d-flex gap-3">
               <input type="text" name="search" class="form-control header-search" id="search" placeholder="Search the store..." required="">
               <button class="header-action-btn" data-bs-toggle="dropdown" aria-expanded="false">
-                <i class="bi bi-cart3"></i><span>2 Items</span><i class="bi bi-chevron-down"></i>
+                <i class="bi bi-cart3"></i><span class="d-none d-md-flex">2 Items</span><i class="d-none d-md-flex bi bi-chevron-down"></i>
               </button>
               <div class="dropdown-menu" style="">
                 <div class="dropdown-body">
@@ -166,7 +166,7 @@
                 <div class="order-summary">
                   <div class="order-summary-content">
                     <div class="order-items">
-                      <div class="order-item align-items-center">
+                      <div class="order-item align-items-center flex-wrap flex-sm-nowrap">
                         <div class="order-item-image">
                           <img src="https://simplifysoftwareau.github.io/public-assets/mgm/webstore/images/artwork.thewaifs.1.jpg" alt="Product" class="img-fluid">
                         </div>
@@ -174,11 +174,12 @@
                           <h4>Up All Night</h4>
                           <p class="order-item-variant">The Waifs</p>
                         </div>
+                        <div class="w-100 d-block d-sm-none"></div>
                         <div>Digital Album</div>
                         <div>$29.99</div>
                         <div><a href="#" class="text-decoration-underline">Download</a></div>
                       </div>
-                      <div class="order-item align-items-center">
+                      <div class="order-item align-items-center flex-wrap flex-sm-nowrap">
                         <div class="order-item-image">
                           <img src="https://simplifysoftwareau.github.io/public-assets/mgm/webstore/images/artwork.thewaifs.6.jpg" alt="Product" class="img-fluid">
                         </div>
@@ -186,17 +187,18 @@
                           <h4>Sun Dirt Water</h4>
                           <p class="order-item-variant">The Waifs</p>
                         </div>
+                        <div class="w-100 d-block d-sm-none"></div>
                         <div>Vinyl LP</div>
                         <div>$39.98</div>
                         <div><a href="#" class="text-decoration-underline">More Info</a></div>
                       </div>
                       <div class="order-item align-items-center pb-0 border-bottom-0 mb-2">
-                        <div class="order-item-image">
+                        <div class="order-item-image d-none d-sm-block">
 
                         </div>
-                        <div class="order-item-details">
+                        <div class="order-item-details d-none d-sm-block">
                           <h4></h4>
-                          <p class="order-item-variant"></p>
+                          <p class="order-item-variant d-none d-sm-block"></p>
                         </div>
                         <div class="order-breakdown-labels">
                           Subtotal (inc GST)<br>
@@ -210,21 +212,21 @@
                           $1.60<br>
                           <b>$81.56</b>
                         </div>
-                        <div></div>
+                        <div class="d-none d-sm-block"></div>
                       </div>
                       <div class="order-item align-items-center pb-0">
-                        <div class="">
+                        <div class="d-none d-sm-block">
                         </div>
-                        <div class="order-item-details">
+                        <div class="order-item-details d-none d-sm-block">
                           <h4></h4>
-                          <p class="order-item-variant"></p>
+                          <p class="order-item-variant d-none d-sm-block"></p>
                         </div>
-                        <div class="order-breakdown-labels">
+                        <div class="order-breakdown-labels d-none d-sm-block">
                         </div>
                         <div class="order-breakdown-prices order-breakdown-message">
                           * Total was paid in Australian Dollars (AUD)
                         </div>
-                        <div></div>
+                        <div class="d-none d-sm-block"></div>
                       </div>
                     </div>
                   </div>
@@ -256,15 +258,15 @@
                 </div>
               </div>
             </div>
-            <div class="d-flex justify-content-between mt-4">
-              <a href="#" class="continue-shopping">
-                <i class="bi bi-arrow-left me-2"></i>Continue Shopping
-              </a>
-            </div>
           </form>
+          <div class="d-flex justify-content-between mt-4">
+            <a href="#" class="continue-shopping">
+              <i class="bi bi-arrow-left me-2"></i>Continue Shopping
+            </a>
+          </div>
+
         </div>
       </div>
-
     </section><!-- /Starter Section 2 Section -->
 
   </main>

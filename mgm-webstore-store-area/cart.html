@@ -34,7 +34,7 @@
     <!-- Main Header -->
     <div class="main-header">
       <div class="container-fluid container-xl">
-        <div class="d-flex py-3 align-items-center justify-content-between">
+        <div class="d-flex flex-column flex-md-row p-3 p-lg-0 py-lg-3 align-items-center justify-content-between">
 
           <!-- Logo -->
           <a href="index.html" class="logo d-flex align-items-center">
@@ -43,13 +43,13 @@
           </a>
 
           <!-- Actions -->
-          <div class="header-actions d-flex align-items-center justify-content-end">
+          <div class="header-actions d-flex mt-3 mt-md-0 align-items-center justify-content-end">
 
             <!-- Account -->
             <div class="d-flex gap-3">
               <input type="text" name="search" class="form-control header-search" id="search" placeholder="Search the store..." required="">
               <button class="header-action-btn" data-bs-toggle="dropdown" aria-expanded="false">
-                <i class="bi bi-cart3"></i><span>2 Items</span><i class="bi bi-chevron-down"></i>
+                <i class="bi bi-cart3"></i><span class="d-none d-md-flex">2 Items</span><i class="d-none d-md-flex bi bi-chevron-down"></i>
               </button>
               <div class="dropdown-menu" style="">
                 <div class="dropdown-body">
@@ -147,6 +147,13 @@
 
   <main class="main">
 
+    <!-- Page Title -->
+    <div class="page-title">
+      <div class="container">
+        <h1>Cart</h1>
+      </div>
+    </div><!-- End Page Title -->
+
     <!-- Cart Section -->
     <section id="cart" class="cart section">
 
@@ -185,24 +192,26 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-6 col-lg-2 d-flex px-4">
+                    <div class="col-6 col-lg-2">
                       <div class="price-mobile d-lg-none">Quantity:</div>
-                      <div class="quantity-selector">
-                        <input type="number" class="quantity-input" value="1" min="1" max="10">
-                        <div>
-                          <button class="quantity-btn decrease">
-                            <i class="bi bi-caret-up-fill"></i>
-                          </button>
-                          <button class="quantity-btn increase">
-                            <i class="bi bi-caret-down-fill"></i>
-                          </button>
+                      <div class="d-flex">
+                        <div class="quantity-selector">
+                          <input type="number" class="quantity-input" value="1" min="1" max="10">
+                          <div>
+                            <button class="quantity-btn decrease">
+                              <i class="bi bi-caret-up-fill"></i>
+                            </button>
+                            <button class="quantity-btn increase">
+                              <i class="bi bi-caret-down-fill"></i>
+                            </button>
+                          </div>
                         </div>
+                        <button class="trash-btn">
+                          <i class="bi bi-trash"></i>
+                        </button>
                       </div>
-                      <button class="trash-btn">
-                        <i class="bi bi-trash"></i>
-                      </button>
                     </div>
-                    <div class="col-6 col-lg-1 px-4">
+                    <div class="col-6 col-lg-1">
                       <div class="price-mobile d-lg-none">Price:</div>
                       <div class="product-total">$29.99</div>
                     </div>
@@ -223,24 +232,26 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-6 col-lg-2 text-lg-center d-flex px-4">
+                    <div class="col-6 col-lg-2">
                       <div class="price-mobile d-lg-none">Quantity:</div>
-                      <div class="quantity-selector">
-                        <input type="number" class="quantity-input" value="2" min="1" max="10">
-                        <div>
-                          <button class="quantity-btn decrease">
-                            <i class="bi bi-caret-up-fill"></i>
-                          </button>
-                          <button class="quantity-btn increase">
-                            <i class="bi bi-caret-down-fill"></i>
-                          </button>
+                      <div class="d-flex">
+                        <div class="quantity-selector">
+                          <input type="number" class="quantity-input" value="2" min="1" max="10">
+                          <div>
+                            <button class="quantity-btn decrease">
+                              <i class="bi bi-caret-up-fill"></i>
+                            </button>
+                            <button class="quantity-btn increase">
+                              <i class="bi bi-caret-down-fill"></i>
+                            </button>
+                          </div>
                         </div>
+                        <button class="trash-btn">
+                          <i class="bi bi-trash"></i>
+                        </button>
                       </div>
-                      <button class="trash-btn">
-                        <i class="bi bi-trash"></i>
-                      </button>
                     </div>
-                    <div class="col-6 col-lg-1 px-4">
+                    <div class="col-6 col-lg-1">
                       <div class="price-mobile d-lg-none">Price:</div>
                       <div class="product-total">$38.98</div>
                     </div>
@@ -266,7 +277,7 @@
                     <a href="#" class="continue-shopping">
                       <i class="bi bi-arrow-left me-2"></i>Continue Shopping
                     </a>
-                    <button class="btn btn-checkout">
+                    <button class="btn btn-checkout mt-3 mt-md-0">
                       Proceed to Checkout
                     </button>
                   </div>

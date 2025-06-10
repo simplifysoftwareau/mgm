@@ -464,6 +464,11 @@
 
     .order-breakdown-labels {
       padding-right: 30px;
+      width: 100%;
+
+      @media (min-width: 576px) {
+        width: auto;
+      }
     }
 
     .order-breakdown-prices {
@@ -560,7 +565,6 @@
   @media (max-width: 991.98px) {
     position: relative;
     top: 0;
-    margin-top: 2rem;
   }
 }
 

@@ -120,10 +120,6 @@
         border-radius: 4px;
       }
 
-      .header-search {
-        width: 300px;
-      }
-
       .header-action-btn {
         display: flex;
         gap: 8px;
@@ -320,14 +316,6 @@
     .main-header {
       .header-actions {
         gap: 0.5rem;
-
-        .header-action-btn {
-          padding: 0.25rem;
-
-          i {
-            font-size: 20px;
-          }
-        }
       }
     }
   }
@@ -392,6 +380,7 @@
       .order-item {
         display: flex;
         gap: 15px;
+        row-gap: 5px;
         padding-bottom: 5px;
 
         &:last-child {
@@ -552,6 +541,12 @@
     &:active {
       background-color: color-mix(in srgb, var(--accent-color), transparent 80%);
     }
+  }
+}
+
+@media (min-width: 768px) {
+  .header-search {
+    width: 300px;
   }
 }
 

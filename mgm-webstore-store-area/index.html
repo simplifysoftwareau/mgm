@@ -34,7 +34,7 @@
     <!-- Main Header -->
     <div class="main-header">
       <div class="container-fluid container-xl">
-        <div class="d-flex py-3 align-items-center justify-content-between">
+        <div class="d-flex flex-column flex-md-row p-3 p-lg-0 py-lg-3 align-items-center justify-content-between">
 
           <!-- Logo -->
           <a href="index.html" class="logo d-flex align-items-center">
@@ -43,13 +43,13 @@
           </a>
 
           <!-- Actions -->
-          <div class="header-actions d-flex align-items-center justify-content-end">
+          <div class="header-actions d-flex mt-3 mt-md-0 align-items-center justify-content-end">
 
             <!-- Account -->
             <div class="d-flex gap-3">
               <input type="text" name="search" class="form-control header-search" id="search" placeholder="Search the store..." required="">
               <button class="header-action-btn" data-bs-toggle="dropdown" aria-expanded="false">
-                <i class="bi bi-cart3"></i><span>2 Items</span><i class="bi bi-chevron-down"></i>
+                <i class="bi bi-cart3"></i><span class="d-none d-md-flex">2 Items</span><i class="d-none d-md-flex bi bi-chevron-down"></i>
               </button>
               <div class="dropdown-menu" style="">
                 <div class="dropdown-body">
@@ -367,7 +367,7 @@
             </div>
           </div><!-- End Card Item -->
 
-          <div class="col-lg-2 col-md-3">
+          <div class="d-none d-lg-flex col-lg-2 col-md-3">
             <div class="card">
               <div class="card-img">
                 <img src="https://simplifysoftwareau.github.io/public-assets/mgm/webstore/images/artwork.thewaifs.5.jpg" alt="" class="img-fluid">
@@ -380,7 +380,7 @@
             </div>
           </div><!-- End Card Item -->
 
-          <div class="col-lg-2 col-md-3">
+          <div class="d-none d-lg-flex col-lg-2 col-md-3">
             <div class="card">
               <div class="card-img">
                 <img src="https://simplifysoftwareau.github.io/public-assets/mgm/webstore/images/artwork.thewaifs.6.jpg" alt="" class="img-fluid">
@@ -396,7 +396,7 @@
         </div>
 
         <div class="pagination-2">
-          <div class="d-flex justify-content-center">
+          <div class="d-none d-md-flex justify-content-center">
             <ul>
               <li><a href="#"><i class="bi bi-chevron-left"></i></a></li>
               <li><a href="#"><i class="bi bi-chevron-right"></i></a></li>

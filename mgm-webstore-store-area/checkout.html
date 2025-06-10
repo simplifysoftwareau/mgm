@@ -34,7 +34,7 @@
     <!-- Main Header -->
     <div class="main-header">
       <div class="container-fluid container-xl">
-        <div class="d-flex py-3 align-items-center justify-content-between">
+        <div class="d-flex flex-column flex-md-row p-3 p-lg-0 py-lg-3 align-items-center justify-content-between">
 
           <!-- Logo -->
           <a href="index.html" class="logo d-flex align-items-center">
@@ -43,13 +43,13 @@
           </a>
 
           <!-- Actions -->
-          <div class="header-actions d-flex align-items-center justify-content-end">
+          <div class="header-actions d-flex mt-3 mt-md-0 align-items-center justify-content-end">
 
             <!-- Account -->
             <div class="d-flex gap-3">
               <input type="text" name="search" class="form-control header-search" id="search" placeholder="Search the store..." required="">
               <button class="header-action-btn" data-bs-toggle="dropdown" aria-expanded="false">
-                <i class="bi bi-cart3"></i><span>2 Items</span><i class="bi bi-chevron-down"></i>
+                <i class="bi bi-cart3"></i><span class="d-none d-md-flex">2 Items</span><i class="d-none d-md-flex bi bi-chevron-down"></i>
               </button>
               <div class="dropdown-menu" style="">
                 <div class="dropdown-body">
@@ -146,6 +146,13 @@
   </header>
 
   <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title">
+      <div class="container">
+        <h1>Checkout</h1>
+      </div>
+    </div><!-- End Page Title -->
 
     <!-- Ecommerce Checkout Section -->
     <section id="ecommerce-checkout" class="ecommerce-checkout section">
@@ -253,11 +260,11 @@
                     </div>
 
                   </div>
-                  <div class="d-flex justify-content-between mt-4">
+                  <div class="d-flex flex-column flex-md-row justify-content-between mt-4">
                     <a href="#" class="continue-shopping">
                       <i class="bi bi-arrow-left me-2"></i>Continue Shopping
                     </a>
-                    <button type="button" class="btn btn-primary next-step" data-next="2">Continue to Address</button>
+                    <button type="button" class="btn btn-primary next-step mt-3 mt-md-0" data-next="2">Continue to Address</button>
                   </div>
                 </form>
               </div>
@@ -293,9 +300,9 @@
                   <div class="form-group mt-3 fw-light">
                     Start typing your address in the <i>Address</i> field and select your address from the drop down list. If you can't find your address or are entering a PO Box or Parcel Locker, click the <i>Enter address manually</i> link. Please ensure that you complete the Unit field if relevant.
                   </div>
-                  <div class="d-flex justify-content-between mt-4">
+                  <div class="d-flex flex-column flex-md-row justify-content-between mt-4">
                     <button type="button" class="btn btn-outline-secondary prev-step" data-prev="1">Back to Details</button>
-                    <button type="button" class="btn btn-primary next-step" data-next="3">Continue to Delivery</button>
+                    <button type="button" class="btn btn-primary next-step mt-3 mt-md-0" data-next="3">Continue to Delivery</button>
                   </div>
                 </form>
               </div>
@@ -326,9 +333,9 @@
                     <label for="card-number">Delivery Instructions</label>
                     <textarea class="form-control" name="card-number" id="card-number" placeholder="Enter your delivery instructions here..." rows="5" required=""></textarea>
                   </div>
-                  <div class="d-flex justify-content-between mt-4">
+                  <div class="d-flex flex-column flex-md-row justify-content-between mt-4">
                     <button type="button" class="btn btn-outline-secondary prev-step" data-prev="2">Back to Address</button>
-                    <button type="button" class="btn btn-primary next-step" data-next="4">Continue to Payment</button>
+                    <button type="button" class="btn btn-primary next-step mt-3 mt-md-0" data-next="4">Continue to Payment</button>
                   </div>
                 </form>
               </div>
@@ -418,9 +425,9 @@
                     <br><br>
                     *** Please ensure that the details of your order are correct before continuing. ***
                   </div>
-                  <div class="d-flex justify-content-between mt-4">
+                  <div class="d-flex flex-column flex-md-row justify-content-between mt-4">
                     <button type="button" class="btn btn-outline-secondary prev-step" data-prev="3">Back to Delivery</button>
-                    <button type="button" class="btn btn-primary next-step" data-next="5">Pay Now</button>
+                    <button type="button" class="btn btn-primary next-step mt-3 mt-md-0" data-next="5">Pay Now</button>
                   </div>
                 </form>
               </div>

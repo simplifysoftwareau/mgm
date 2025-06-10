@@ -23,17 +23,17 @@
     font-weight: 500;
     padding: 0.5rem 0;
     transition: all 0.2s ease;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
 
-    &:hover {
-      color: color-mix(in srgb, var(--accent-color), transparent 25%);
-    }
+  @media (min-width: 768px) {
 
-    i {
-      transition: transform 0.2s ease;
-    }
-
-    &:hover i {
-      transform: translateX(-3px);
+    .continue-shopping,
+    .update-cart {
+      width: auto;
     }
   }
 
@@ -342,11 +342,6 @@
           border-color: var(--accent-color);
           box-shadow: 0 4px 10px rgba(54, 144, 231, 0.2);
 
-          &:hover {
-            background-color: color-mix(in srgb, var(--accent-color), #000 10%);
-            border-color: color-mix(in srgb, var(--accent-color), #000 10%);
-          }
-
           &:active {
             transform: translateY(0);
             box-shadow: 0 2px 5px rgba(54, 144, 231, 0.2);
@@ -358,13 +353,6 @@
           border: 2px solid color-mix(in srgb, var(--heading-color), transparent 70%);
           background-color: transparent;
 
-          &:hover {
-            background-color: color-mix(in srgb, var(--heading-color), transparent 95%);
-            color: var(--heading-color);
-            border-color: color-mix(in srgb, var(--heading-color), transparent 50%);
-            transform: translateY(-2px);
-          }
-
           &:active {
             transform: translateY(0);
           }
@@ -374,13 +362,6 @@
           background-color: #28a745;
           border-color: #28a745;
           box-shadow: 0 4px 10px rgba(40, 167, 69, 0.2);
-
-          &:hover {
-            background-color: #218838;
-            border-color: #1e7e34;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 15px rgba(40, 167, 69, 0.25);
-          }
 
           &:active {
             transform: translateY(0);
