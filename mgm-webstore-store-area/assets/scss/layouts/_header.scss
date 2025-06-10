@@ -449,6 +449,7 @@
 
     .order-totals {
       border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+      border-bottom: none;
 
       >div {
         font-size: 0.95rem;

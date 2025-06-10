@@ -551,6 +551,7 @@ h6 {
 
 .order-summary .order-summary-content .order-totals {
   border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  border-bottom: none;
 }
 
 .order-summary .order-summary-content .order-totals>div {
