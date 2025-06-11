@@ -1,0 +1,325 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+.hero {
+  padding-top: 140px;
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 80px;
+
+  img {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
+
+  .container {
+    position: relative;
+    z-index: 3;
+  }
+
+  h2 {
+    margin: 0;
+    font-size: 64px;
+    font-weight: 700;
+  }
+
+  p {
+    margin: 16px 0 54px 0;
+    font-size: 26px;
+    text-shadow: -1px -1px 5px var(--surface-color), 1px -1px 5px var(--surface-color), -1px 1px 5px var(--surface-color), 1px 1px 5px var(--surface-color);
+
+    span {
+      letter-spacing: 1px;
+    }
+  }
+
+  .social-links {
+    margin-top: 25px;
+
+    a {
+      background-color: color-mix(in srgb, var(--default-color), transparent 90%);
+      color: var(--default-color);
+      font-size: 14px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 20px;
+      transition: 0.3s;
+
+      &:hover {
+        background-color: var(--accent-color);
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    h2 {
+      font-size: 32px;
+    }
+
+    p {
+      font-size: 20px;
+    }
+  }
+}
+
+.login-register {
+  .login-register-wrapper {
+    background: linear-gradient(145deg,
+        var(--surface-color),
+        color-mix(in srgb, var(--surface-color) 50%, transparent 50%));
+    border-radius: 20px;
+    padding: 3rem 2.5rem;
+    box-shadow:
+      0 20px 40px -15px color-mix(in srgb, var(--default-color), transparent 90%),
+      0 0 15px -3px color-mix(in srgb, var(--default-color), transparent 95%) inset;
+  }
+
+  // Auth Tabs
+  .auth-tabs {
+    position: relative;
+    border-radius: 12px;
+    background-color: color-mix(in srgb, var(--default-color), transparent 95%);
+    padding: 4px;
+    border: 0;
+
+    .auth-tab-btn.nav-link {
+      background: transparent;
+      border: none;
+      padding: 1rem;
+      color: color-mix(in srgb, var(--default-color), transparent 40%);
+      font-weight: 500;
+      position: relative;
+      transition: all 0.3s ease;
+      z-index: 1;
+
+      &:first-child {
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+      }
+
+      &:last-child {
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+      }
+
+      i {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+        display: block;
+      }
+
+      span {
+        display: block;
+        font-size: 0.95rem;
+      }
+
+      &.active,
+      &.nav-link.active {
+        color: var(--contrast-color);
+        border: none;
+
+        &::before {
+          content: '';
+          position: absolute;
+          inset: 4px;
+          background: linear-gradient(135deg,
+              var(--accent-color),
+              color-mix(in srgb, var(--accent-color), transparent 25%));
+          border-radius: 8px;
+          z-index: -1;
+        }
+      }
+    }
+  }
+
+  // Auth Title
+  .auth-title {
+    color: var(--heading-color);
+    font-size: 1.75rem;
+    font-weight: 600;
+  }
+
+  // Form Styles
+  .form-label {
+    font-weight: 500;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    color: color-mix(in srgb, var(--heading-color), transparent 15%);
+  }
+
+  .input-group {
+    border-radius: 10px;
+    border: 2px solid color-mix(in srgb, var(--default-color), transparent 85%);
+    background-color: var(--surface-color);
+    transition: all 0.3s ease;
+
+    &:focus-within {
+      border-color: var(--accent-color);
+      box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent-color), transparent 90%);
+    }
+
+    .input-group-text {
+      background-color: transparent;
+      border: none;
+      color: color-mix(in srgb, var(--default-color), transparent 50%);
+      padding-right: 0;
+
+      i {
+        font-size: 1.1rem;
+      }
+    }
+
+    .form-control {
+      border: none;
+      padding: 0.75rem 0.5rem;
+      background-color: transparent;
+      font-size: 1rem;
+      color: var(--default-color);
+
+      &:focus {
+        box-shadow: none;
+      }
+
+      &::placeholder {
+        color: color-mix(in srgb, var(--default-color), transparent 70%);
+      }
+    }
+  }
+
+  // Checkbox Styles
+  .form-check {
+    .form-check-input {
+      width: 1.2rem;
+      height: 1.2rem;
+      border: 2px solid color-mix(in srgb, var(--default-color), transparent 70%);
+      margin-right: 0.5rem;
+      cursor: pointer;
+
+      &:checked {
+        background-color: var(--accent-color);
+        border-color: var(--accent-color);
+      }
+
+      &:focus {
+        box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent-color), transparent 90%);
+        border-color: var(--accent-color);
+      }
+    }
+
+    .form-check-label {
+      color: color-mix(in srgb, var(--default-color), transparent 35%);
+      cursor: pointer;
+      font-size: 0.9rem;
+
+      a {
+        color: var(--accent-color);
+        font-weight: 500;
+        position: relative;
+
+        &::after {
+          content: '';
+          position: absolute;
+          left: 0;
+          bottom: -2px;
+          width: 100%;
+          height: 2px;
+          background-color: currentColor;
+          transform: scaleX(0);
+          transition: transform 0.3s ease;
+        }
+
+        &:hover::after {
+          transform: scaleX(1);
+        }
+      }
+    }
+  }
+
+  // Button Styles
+  .btn-primary {
+    background: linear-gradient(135deg,
+        var(--accent-color),
+        color-mix(in srgb, var(--accent-color), transparent 25%));
+    border: none;
+    padding: 0.875rem;
+    font-weight: 500;
+    font-size: 1rem;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(rgba(255, 255, 255, 0.2),
+          transparent);
+      transform: translateY(-100%);
+      transition: transform 0.3s ease;
+    }
+  }
+
+  // Additional Links
+  .forgot-password {
+    color: var(--accent-color);
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: none;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 100%;
+      height: 2px;
+      background-color: currentColor;
+      transition: transform 0.3s ease;
+    }
+  }
+
+  // Responsive Adjustments
+  @media (max-width: 576px) {
+    padding: 2rem 1.5rem;
+
+    .auth-title {
+      font-size: 1.5rem;
+    }
+
+    .auth-tab-btn.nav-link {
+      padding: 0.75rem;
+
+      i {
+        font-size: 1.1rem;
+        margin-bottom: 0.3rem;
+      }
+
+      span {
+        font-size: 0.85rem;
+      }
+    }
+
+    .form-control {
+      font-size: 16px; // Prevents zoom on iOS
+    }
+  }
+}
