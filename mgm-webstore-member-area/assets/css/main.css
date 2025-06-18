@@ -1563,10 +1563,6 @@ section,
   padding: 20px 0;
 }
 
-.starter-section .modal-dialog {
-  min-width: 40%;
-}
-
 .starter-section .cta-btn {
   font-family: var(--heading-font);
   font-weight: 500;
@@ -1585,6 +1581,165 @@ section,
   background: var(--accent-color);
   color: var(--default-color);
   border: 2px solid var(--accent-color);
+}
+
+.starter-section .page-designer {
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 80%);
+  border-radius: 10px;
+}
+
+.starter-section .page-designer>div {
+  padding: 10px 50px;
+}
+
+.starter-section .page-designer>div:first-of-type {
+  padding: 15px 50px;
+}
+
+.starter-section .page-designer .cta-upload {
+  padding: 20px;
+  border: 2px solid color-mix(in srgb, var(--default-color), transparent 80%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.starter-section .page-designer .cta-upload i {
+  font-size: 2em;
+  opacity: 80%;
+}
+
+.starter-section .page-designer .cta-upload:hover {
+  cursor: pointer;
+}
+
+.starter-section .page-designer .cta-btn {
+  border: none;
+  padding: 8px;
+}
+
+.starter-section .page-designer .form-group input {
+  min-width: 250px;
+}
+
+.starter-section .page-designer .form-check {
+  margin-bottom: 0;
+  margin-left: auto;
+}
+
+.starter-section .page-designer .form-check .form-check-label {
+  margin-bottom: 0;
+}
+
+.starter-section .page-designer .quantity-selector {
+  display: inline-flex;
+  align-items: center;
+  background-color: var(--surface-color);
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 80%);
+  border-radius: 0.375rem;
+  overflow: hidden;
+}
+
+.starter-section .page-designer .quantity-selector .quantity-btn {
+  background: none;
+  border: none;
+  width: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--default-color);
+  transition: background-color 0.3s ease;
+}
+
+.starter-section .page-designer .quantity-selector .quantity-btn:hover {
+  background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
+  color: var(--accent-color);
+}
+
+.starter-section .page-designer .quantity-selector .quantity-btn:active {
+  background-color: color-mix(in srgb, var(--accent-color), transparent 80%);
+}
+
+.starter-section .page-designer .quantity-selector .quantity-btn i {
+  font-size: 12px;
+}
+
+.starter-section .page-designer .quantity-selector .quantity-input {
+  width: 60px;
+  min-width: calc(100% - 32px);
+  text-align: center;
+  border: none;
+  border-right: 1px solid color-mix(in srgb, var(--default-color), transparent 80%);
+  font-size: 0.875rem;
+  color: var(--heading-color);
+  font-weight: 600;
+  padding: 0;
+  background-color: var(--surface-color);
+}
+
+.starter-section .page-designer .quantity-selector .quantity-input:focus {
+  outline: none;
+}
+
+.starter-section .page-designer .quantity-selector .quantity-input::-webkit-inner-spin-button,
+.starter-section .page-designer .quantity-selector .quantity-input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.starter-section .page-designer .page-designer-header {
+  background-color: color-mix(in srgb, var(--default-color), transparent 80%);
+  border-radius: 10px 10px 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 5px;
+}
+
+.starter-section .page-designer .page-designer-banner,
+.starter-section .page-designer .page-designer-content {
+  margin-top: 10px;
+  background-color: color-mix(in srgb, var(--default-color), transparent 80%);
+  padding: 25px 50px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.starter-section .page-designer .page-designer-banner>div,
+.starter-section .page-designer .page-designer-content>div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.starter-section .page-designer .page-designer-content>div>div {
+  gap: 5px;
+}
+
+.starter-section .page-designer .page-designer-content .arrow-line-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.starter-section .page-designer .page-designer-content .arrow-line-container .line {
+  flex-grow: 1;
+  height: 2px;
+  background-color: var(--default-color);
+  margin: 0 -4px;
+}
+
+.starter-section .page-designer .page-designer-content .arrow-line-container .bi {
+  font-size: 24px;
+  color: var(--default-color);
+}
+
+.starter-section .page-designer .page-designer-footer>div {
+  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 80%);
+  text-align: center;
+  padding-top: 10px;
+  font-size: 0.9em;
 }
 
 /*--------------------------------------------------------------

@@ -109,9 +109,9 @@
   <main class="main">
 
     <!-- Page Title -->
-    <div class="page-title light-background">
+    <div class="page-title light-background position-relative">
       <div class="container d-lg-flex justify-content-between align-items-center">
-        <h1 class="mb-2 mb-lg-0">Store Manager -&gt; Test Store</h1>
+        <h1 class="mb-2 mb-lg-0">Store Manager -&gt; The Waifs</h1>
         <div class="breadcrumbs">
           <i class="bi bi-question-circle"></i>
         </div>
@@ -133,7 +133,7 @@
 
       <!-- Store Designer Modals -->
       <div class="modal fade" id="storeDesignerModal" tabindex="-1" aria-labelledby="termsModalLabel" aria-modal="true" role="dialog">
-        <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-dialog modal-lg">
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title" id="termsModalLabel">Store Designer</h5>
@@ -144,13 +144,13 @@
                 <ul class="nav nav-tabs row g-2 d-flex" role="tablist">
 
                   <li class="nav-item col-5" role="presentation">
-                    <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#theme-designer-tab-1" aria-selected="false" role="tab" tabindex="-1">
+                    <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#theme-designer-tab" aria-selected="false" role="tab" tabindex="-1">
                       <h4>Theme Designer</h4>
                     </a>
                   </li><!-- End tab nav item -->
 
                   <li class="nav-item col-5" role="presentation">
-                    <a class="nav-link" data-bs-toggle="tab" data-bs-target="#theme-designer-tab-2" aria-selected="true" role="tab">
+                    <a class="nav-link" data-bs-toggle="tab" data-bs-target="#page-designer-tab" aria-selected="true" role="tab">
                       <h4>Page Designer</h4>
                     </a><!-- End tab nav item -->
                   </li>
@@ -158,7 +158,7 @@
 
                 <div class="tab-content">
 
-                  <div class="tab-pane active show" id="theme-designer-tab-1" role="tabpanel">
+                  <div class="tab-pane active show" id="theme-designer-tab" role="tabpanel">
                     <div class="input-form" data-form="4">
                       <form class="checkout-form-element">
                         <div class="col-6 form-group">
@@ -171,19 +171,19 @@
                           <label for="city">Modify your colour scheme</label>
                           <div class="d-flex gap-3">
                             <div class="form-group">
-                              <div class="color-picker" style="background-color:#e2e2e">&nbsp;</div>
+                              <div class="color-picker" style="background-color:#11163c" title="Default Colour">&nbsp;</div>
                             </div>
                             <div class="form-group mt-3 mt-md-0">
-                              <div class="color-picker" style="background-color:#ffffff">&nbsp;</div>
+                              <div class="color-picker" style="background-color:#ffffff" title="Background Colour">&nbsp;</div>
                             </div>
                             <div class="form-group mt-3 mt-md-0">
-                              <div class="color-picker" style="background-color:#e3e3e3">&nbsp;</div>
+                              <div class="color-picker" style="background-color:#ffffff" title="Surface Colour">&nbsp;</div>
                             </div>
                             <div class="form-group mt-3 mt-md-0">
-                              <div class="color-picker" style="background-color:#c5c5c5">&nbsp;</div>
+                              <div class="color-picker" style="background-color:#c5c5c5" title="Outline Colour">&nbsp;</div>
                             </div>
                             <div class="form-group mt-3 mt-md-0">
-                              <div class="color-picker" style="background-color:#f35800">&nbsp;</div>
+                              <div class="color-picker" style="background-color:#ce4836" title="Accent Colour">&nbsp;</div>
                             </div>
                           </div>
                         </div>
@@ -197,27 +197,93 @@
                     </div>
                   </div><!-- End tab content item -->
 
-                  <div class="tab-pane" id="theme-designer-tab-2" role="tabpanel">
+                  <div class="tab-pane" id="page-designer-tab" role="tabpanel">
                     <div class="input-form" data-form="4">
                       <form class="checkout-form-element">
-                        <div class="col-md-6 form-group">
-                          <label for="useType">Choose how to design your page</label>
-                          <select class="form-select" id="useType" name="useType" required="">
-                            <option value="simple-page" selected="">Simple Page</option>
-                            <option value="custom-page">Custom Page</option>
-                          </select>
-                        </div>
-                        <div class="row mt-3">
-                          <div class="col-6 form-group">
-                            <label for="address">Page Title</label>
-                            <input type="text" class="form-control" name="address" id="address" placeholder="" required="">
-                          </div>
-                        </div>
-                        <div class="row mt-3">
-                          <label for="city">Page Background Colour</label>
-                          <div class="d-flex gap-3">
-                            <div class="form-group">
-                              <div class="color-picker" style="background-color:#2e2e2e">&nbsp;</div>
+                        <div class="col-md-12 form-group">
+                          <div class="page-designer">
+                            <div class="page-designer-header">
+                              <label>Add a logo to your page header</label>
+                              <div class="d-flex flex-row align-items-center w-100">
+                                <div class="cta-upload" title="Click to upload your logo">
+                                  <i class="bi bi-image"></i>
+                                </div>
+                                <div class="d-flex gap-1 align-items-center">
+                                  <a class="cta-btn" href="#" title="Remove your logo"><i class="bi bi-trash"></i></a>
+                                  <div class="form-group">
+                                    <input type="text" name="logo-link" class="form-control" id="logo-link" placeholder="Enter your logo link" required="">
+                                  </div>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" id="make-transparent" name="make-transparent" required="">
+                                  <label class="form-check-label" for="make-transparent">
+                                    Make header transparent
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="page-designer-banner">
+                              <label>Add a banner to your page</label>
+                              <div>
+                                <div class="cta-upload" title="Click to upload your banner">
+                                  <i class="bi bi-image"></i>
+                                </div>
+                                <div class="d-flex gap-1 align-items-center">
+                                  <a class="cta-btn" href="#" title="Remove your banner"><i class="bi bi-trash"></i></a>
+                                  <div class="form-group">
+                                    <input type="text" name="banner-link" class="form-control" id="banner-link" placeholder="Enter your banner link" required="">
+                                  </div>
+                                </div>
+                                <div class="form-check mx-2">
+                                  <input class="form-check-input" type="checkbox" id="make-full-width" name="make-full-width" required="">
+                                  <label class="form-check-label" for="make-full-width">
+                                    Make full-width
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="page-designer-content">
+                              <label>Add a background image to your page</label>
+                              <div class="d-flex flex-column align-items-start justify-content-between">
+                                <div class="d-flex align-items-center">
+                                  <div class="cta-upload" title="Click to upload your background image">
+                                    <i class="bi bi-image"></i>
+                                  </div>
+                                  <div class="d-flex gap-1 align-items-center">
+                                    <a class="cta-btn" href="#" title="Remove your background image"><i class="bi bi-trash"></i></a>
+                                  </div>
+                                  <div class="form-check w-100">
+                                    <input class="form-check-input" type="checkbox" id="make-full-page" name="make-full-page" required="">
+                                    <label class="form-check-label" for="make-full-page">
+                                      Make full-page
+                                    </label>
+                                  </div>
+                                </div>
+                                <div class="form-group d-flex flex-column mt-3 w-100">
+                                  <div class="arrow-line-container">
+                                    <i class="bi bi-arrow-left"></i>
+                                    <div class="line"></div>
+                                    <i class="bi bi-arrow-right"></i>
+                                  </div>
+                                  <div class="d-flex justify-content-center align-items-center">
+                                    <label class="mb-0 mx-2">Set the content width</label>
+                                    <div class="quantity-selector">
+                                      <input type="number" class="quantity-input" value="1200" min="992" max="1400">
+                                      <div>
+                                        <button class="quantity-btn decrease">
+                                          <i class="bi bi-caret-up-fill"></i>
+                                        </button>
+                                        <button class="quantity-btn increase">
+                                          <i class="bi bi-caret-down-fill"></i>
+                                        </button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="page-designer-footer">
+                              <div>© 2025 <b>The Waifs</b></div>
                             </div>
                           </div>
                         </div>
