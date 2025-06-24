@@ -72,11 +72,6 @@
   });
 
   /**
-   * Initiate Pure Counter
-   */
-  new PureCounter();
-
-  /**
    * Ecommerce Checkout Section
    * This script handles the functionality of both multi-step and one-page checkout processes
    */

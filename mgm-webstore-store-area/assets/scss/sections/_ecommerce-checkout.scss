@@ -750,6 +750,12 @@
     }
   }
 
+  .btn-primary {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    box-shadow: 0 4px 10px rgba(54, 144, 231, 0.2);
+  }
+
   // Swiper wrapper fix
   .swiper-wrapper {
     height: auto !important;
