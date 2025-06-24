@@ -356,6 +356,230 @@ h6 {
   color: var(--contrast-color);
 }
 
+.header .main-header .order-summary {
+  background-color: var(--surface-color);
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 100px;
+}
+
+.header .main-header .order-summary .order-summary-header {
+  padding: 20px;
+  border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .main-header .order-summary .order-summary-header h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.header .main-header .order-summary .order-summary-header .btn-toggle-summary {
+  background: none;
+  border: none;
+  color: var(--heading-color);
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.header .main-header .order-summary .order-summary-header .btn-toggle-summary.collapsed {
+  transform: rotate(180deg);
+}
+
+.header .main-header .order-summary .order-summary-content {
+  padding: 20px;
+}
+
+.header .main-header .order-summary .order-summary-content .order-items {
+  max-height: 300px;
+  overflow-y: auto;
+  margin-bottom: 5px;
+}
+
+.header .main-header .order-summary .order-summary-content .order-items::-webkit-scrollbar {
+  width: 5px;
+}
+
+.header .main-header .order-summary .order-summary-content .order-items::-webkit-scrollbar-track {
+  background: color-mix(in srgb, var(--default-color), transparent 95%);
+  border-radius: 10px;
+}
+
+.header .main-header .order-summary .order-summary-content .order-items::-webkit-scrollbar-thumb {
+  background: color-mix(in srgb, var(--default-color), transparent 70%);
+  border-radius: 10px;
+}
+
+.header .main-header .order-summary .order-summary-content .order-items .order-item {
+  display: flex;
+  gap: 15px;
+  row-gap: 5px;
+  padding-bottom: 5px;
+}
+
+.header .main-header .order-summary .order-summary-content .order-items .order-item:last-child {
+  margin-bottom: 0;
+  border-bottom: none;
+}
+
+.header .main-header .order-summary .order-summary-content .order-items .order-item .order-item-image {
+  width: 70px;
+  height: 70px;
+  border-radius: 8px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.header .main-header .order-summary .order-summary-content .order-items .order-item .order-item-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.header .main-header .order-summary .order-summary-content .order-items .order-item .order-item-details {
+  flex: 1;
+}
+
+.header .main-header .order-summary .order-summary-content .order-items .order-item .order-item-details h4 {
+  font-size: 1rem;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.header .main-header .order-summary .order-summary-content .order-items .order-item .order-item-details .artist-name {
+  margin-bottom: 3px;
+}
+
+.header .main-header .order-summary .order-summary-content .order-items .order-item .order-item-details .order-item-variant {
+  font-size: 0.85rem;
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  margin-bottom: 5px;
+}
+
+.header .main-header .order-summary .order-summary-content .order-items .order-item-footer {
+  padding-bottom: 15px;
+}
+
+.header .main-header .order-summary .order-summary-content .order-items .order-item-footer .order-item-price {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 500;
+}
+
+.header .main-header .order-summary .order-summary-content .order-items .order-item-footer .order-item-price .quantity {
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
+}
+
+.header .main-header .order-summary .order-summary-content .order-items .order-item-footer .order-item-price .price {
+  color: var(--heading-color);
+}
+
+.header .main-header .order-summary .order-summary-content .order-totals {
+  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  border-bottom: none;
+}
+
+.header .main-header .order-summary .order-summary-content .order-totals>div {
+  font-size: 0.95rem;
+  padding-top: 15px;
+}
+
+.header .main-header .order-summary .order-summary-content .order-totals>div:first-child {
+  border-top: 1px dashed color-mix(in srgb, var(--default-color), transparent 80%);
+  color: var(--heading-color);
+}
+
+.header .main-header .order-summary .order-summary-content .order-totals .btn-primary {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.header .main-header .order-summary .order-summary-content .order-totals .order-prices {
+  margin-top: 5px;
+  font-size: 0.8em;
+}
+
+.header .main-header .order-summary .quantity-selector {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 80%);
+  border-radius: 0.375rem;
+  overflow: hidden;
+  margin-left: 40px;
+}
+
+.header .main-header .order-summary .quantity-selector .quantity-btn {
+  background: none;
+  border: none;
+  width: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--default-color);
+  transition: background-color 0.3s ease;
+}
+
+.header .main-header .order-summary .quantity-selector .quantity-btn:hover {
+  background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
+  color: var(--accent-color);
+}
+
+.header .main-header .order-summary .quantity-selector .quantity-btn:active {
+  background-color: color-mix(in srgb, var(--accent-color), transparent 80%);
+}
+
+.header .main-header .order-summary .quantity-selector .quantity-btn i {
+  font-size: 12px;
+}
+
+.header .main-header .order-summary .quantity-selector .quantity-input {
+  width: 2.5rem;
+  text-align: center;
+  border: none;
+  border-right: 1px solid color-mix(in srgb, var(--default-color), transparent 80%);
+  font-size: 0.875rem;
+  color: var(--heading-color);
+  font-weight: 600;
+  padding: 0;
+  background-color: var(--surface-color);
+}
+
+.header .main-header .order-summary .quantity-selector .quantity-input:focus {
+  outline: none;
+}
+
+.header .main-header .order-summary .quantity-selector .quantity-input::-webkit-inner-spin-button,
+.header .main-header .order-summary .quantity-selector .quantity-input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.header .main-header .order-summary .trash-btn {
+  background: none;
+  border: none;
+  width: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--default-color);
+  transition: background-color 0.3s ease;
+}
+
+.header .main-header .order-summary .trash-btn:hover {
+  background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
+  color: var(--accent-color);
+}
+
+.header .main-header .order-summary .trash-btn:active {
+  background-color: color-mix(in srgb, var(--accent-color), transparent 80%);
+}
+
 .header .search-form {
   margin: 0;
 }
@@ -423,230 +647,6 @@ h6 {
   .header .main-header .header-actions {
     gap: 0.5rem;
   }
-}
-
-.order-summary {
-  background-color: var(--surface-color);
-  border-radius: 10px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-  position: sticky;
-  top: 100px;
-}
-
-.order-summary .order-summary-header {
-  padding: 20px;
-  border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.order-summary .order-summary-header h3 {
-  margin: 0;
-  font-size: 1.3rem;
-  font-weight: 600;
-}
-
-.order-summary .order-summary-header .btn-toggle-summary {
-  background: none;
-  border: none;
-  color: var(--heading-color);
-  font-size: 1.2rem;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-
-.order-summary .order-summary-header .btn-toggle-summary.collapsed {
-  transform: rotate(180deg);
-}
-
-.order-summary .order-summary-content {
-  padding: 20px;
-}
-
-.order-summary .order-summary-content .order-items {
-  max-height: 300px;
-  overflow-y: auto;
-  margin-bottom: 5px;
-}
-
-.order-summary .order-summary-content .order-items::-webkit-scrollbar {
-  width: 5px;
-}
-
-.order-summary .order-summary-content .order-items::-webkit-scrollbar-track {
-  background: color-mix(in srgb, var(--default-color), transparent 95%);
-  border-radius: 10px;
-}
-
-.order-summary .order-summary-content .order-items::-webkit-scrollbar-thumb {
-  background: color-mix(in srgb, var(--default-color), transparent 70%);
-  border-radius: 10px;
-}
-
-.order-summary .order-summary-content .order-items .order-item {
-  display: flex;
-  gap: 15px;
-  row-gap: 5px;
-  padding-bottom: 5px;
-}
-
-.order-summary .order-summary-content .order-items .order-item:last-child {
-  margin-bottom: 0;
-  border-bottom: none;
-}
-
-.order-summary .order-summary-content .order-items .order-item .order-item-image {
-  width: 70px;
-  height: 70px;
-  border-radius: 8px;
-  overflow: hidden;
-  flex-shrink: 0;
-}
-
-.order-summary .order-summary-content .order-items .order-item .order-item-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.order-summary .order-summary-content .order-items .order-item .order-item-details {
-  flex: 1;
-}
-
-.order-summary .order-summary-content .order-items .order-item .order-item-details h4 {
-  font-size: 1rem;
-  margin-bottom: 5px;
-  font-weight: 600;
-}
-
-.order-summary .order-summary-content .order-items .order-item .order-item-details .artist-name {
-  margin-bottom: 3px;
-}
-
-.order-summary .order-summary-content .order-items .order-item .order-item-details .order-item-variant {
-  font-size: 0.85rem;
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
-  margin-bottom: 5px;
-}
-
-.order-summary .order-summary-content .order-items .order-item-footer {
-  padding-bottom: 15px;
-}
-
-.order-summary .order-summary-content .order-items .order-item-footer .order-item-price {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  font-weight: 500;
-}
-
-.order-summary .order-summary-content .order-items .order-item-footer .order-item-price .quantity {
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
-}
-
-.order-summary .order-summary-content .order-items .order-item-footer .order-item-price .price {
-  color: var(--heading-color);
-}
-
-.order-summary .order-summary-content .order-totals {
-  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-  border-bottom: none;
-}
-
-.order-summary .order-summary-content .order-totals>div {
-  font-size: 0.95rem;
-  padding-top: 15px;
-}
-
-.order-summary .order-summary-content .order-totals>div:first-child {
-  border-top: 1px dashed color-mix(in srgb, var(--default-color), transparent 80%);
-  color: var(--heading-color);
-}
-
-.order-summary .order-summary-content .order-totals .btn-primary {
-  background-color: var(--accent-color);
-  border-color: var(--accent-color);
-}
-
-.order-summary .order-summary-content .order-totals .order-prices {
-  margin-top: 5px;
-  font-size: 0.8em;
-}
-
-.order-summary .quantity-selector {
-  display: inline-flex;
-  align-items: center;
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 80%);
-  border-radius: 0.375rem;
-  overflow: hidden;
-  margin-left: 40px;
-}
-
-.order-summary .quantity-selector .quantity-btn {
-  background: none;
-  border: none;
-  width: 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--default-color);
-  transition: background-color 0.3s ease;
-}
-
-.order-summary .quantity-selector .quantity-btn:hover {
-  background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
-  color: var(--accent-color);
-}
-
-.order-summary .quantity-selector .quantity-btn:active {
-  background-color: color-mix(in srgb, var(--accent-color), transparent 80%);
-}
-
-.order-summary .quantity-selector .quantity-btn i {
-  font-size: 12px;
-}
-
-.order-summary .quantity-selector .quantity-input {
-  width: 2.5rem;
-  text-align: center;
-  border: none;
-  border-right: 1px solid color-mix(in srgb, var(--default-color), transparent 80%);
-  font-size: 0.875rem;
-  color: var(--heading-color);
-  font-weight: 600;
-  padding: 0;
-  background-color: var(--surface-color);
-}
-
-.order-summary .quantity-selector .quantity-input:focus {
-  outline: none;
-}
-
-.order-summary .quantity-selector .quantity-input::-webkit-inner-spin-button,
-.order-summary .quantity-selector .quantity-input::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-.order-summary .trash-btn {
-  background: none;
-  border: none;
-  width: 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--default-color);
-  transition: background-color 0.3s ease;
-}
-
-.order-summary .trash-btn:hover {
-  background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
-  color: var(--accent-color);
-}
-
-.order-summary .trash-btn:active {
-  background-color: color-mix(in srgb, var(--accent-color), transparent 80%);
 }
 
 @media (min-width: 768px) {
