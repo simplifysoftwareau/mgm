@@ -396,7 +396,6 @@ h6 {
 }
 
 .header .main-header .order-summary .order-summary-content .order-items {
-  max-height: 300px;
   overflow-y: auto;
   margin-bottom: 5px;
 }
@@ -420,6 +419,7 @@ h6 {
   gap: 15px;
   row-gap: 5px;
   padding-bottom: 5px;
+  border-bottom: none;
 }
 
 .header .main-header .order-summary .order-summary-content .order-items .order-item:last-child {
@@ -483,6 +483,7 @@ h6 {
 .header .main-header .order-summary .order-summary-content .order-totals {
   border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
   border-bottom: none;
+  padding: 0;
 }
 
 .header .main-header .order-summary .order-summary-content .order-totals>div {
@@ -491,7 +492,6 @@ h6 {
 }
 
 .header .main-header .order-summary .order-summary-content .order-totals>div:first-child {
-  border-top: 1px dashed color-mix(in srgb, var(--default-color), transparent 80%);
   color: var(--heading-color);
 }
 
